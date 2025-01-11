@@ -3,6 +3,10 @@ import requests
 import csv
 
 def extract(body):
+    """
+    Extracts bodies of texts that are in bullet points and returns a list of the bullet points
+    as well as a list of the relevant links within the bullet points
+    """
     points_list = []
     points_links_list = []
     for points in body.ul.find_all("li"):
